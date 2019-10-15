@@ -5,43 +5,34 @@ html {
 
 body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   min-height: 100%;
-  padding-top: 80px;
-  position:relative;
+  padding-top: 120px;
+  position: relative;
 }
 
 a {
-  color:#dd4814;
+  color: #cc0606;
 }
 
 #cabecalho-unici {
-  background-color: #dd4814;
-  height: 80px;
+  background: linear-gradient(135deg, #ffb600 0, #cc0606 75%);
+  min-height: 80px;
   margin: 0;
   padding-bottom: 15px;
   padding-top: 15px;
-  position:fixed;
+  position: fixed;
   width: 100%;
 }
 
-#cabecalho-unici img{
-  max-height: 50px;
-}
-
-#cabecalho-unici a{
-  color:#ffffff;
-  display:inline;
-  float: right;
+#cabecalho-unici a {
+  color: #ffffff;
   font-size: 18px;
   font-style: italic;
-  margin-top: 10px;
 }
 
-.container {
-  width: auto;
-  max-width: 1170px;
-  padding: 0 15px;
+#cabecalho-unici a:hover {
+  color: #cc0606;
 }
 
 .container .tutorial-link {
@@ -49,7 +40,7 @@ a {
   margin: 20px 0;
 }
 
-.container .tutorial-link a{
-  color:#dd4814;
+.container .tutorial-link a {
+  color: #cc0606;
   font-size: 15px;
 }

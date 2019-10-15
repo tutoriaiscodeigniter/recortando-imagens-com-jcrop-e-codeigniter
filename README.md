@@ -1,7 +1,7 @@
-# Recortando imagens com jCrop e CodeIgniter
+# Recortando imagens com as bibliotecas jCrop e Image Manipulation no CodeIgniter
 
-Arquivos do tutorial ensinando a fazer corte em imagens usando o plugin jCrop, do jQuery e o CodeIgniter.
+Nesse tutorial você irá aprender como recortar imagens utilizando o plugin jCrop - do jQuery - e as libraries Upload e Image Manipulation do CodeIgniter.
 
 Veja o tutorial em:
 
-http://www.universidadecodeigniter.com.br/recortando-imagens-com-jcrop-e-codeigniter
+https://www.tutoriaiscodeigniter.com.br/recortando-imagens-com-as-bibliotecas-jcrop-e-image-manipulation-no-codeigniter

@@ -6,4 +6,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['recortar'] = 'Base/Recortar';
-$route['visualizacao'] = 'Base/Visualizacao';
+

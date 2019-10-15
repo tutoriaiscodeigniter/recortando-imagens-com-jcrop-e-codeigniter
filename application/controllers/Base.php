@@ -16,20 +16,13 @@ class Base extends CI_Controller {
 		// Carrega a view da home
 		$this->load->view('home');
 	}
-
-	// Acionado após o recorte da imagem
-	public function Visualizacao()
-	{
-		// Exibe a view com os dados da imagem recortada
-		$this->load->view('visualizacao');
-	}
-
+	
 	// Executa o processo de recorte da imagem
 	public function Recortar(){
 
 		// Configurações para o upload da imagem
 		// Diretório para gravar a imagem
-		$configUpload['upload_path']   = './uploads/';
+		$configUpload['upload_path']   = "uploads";
 		// Tipos de imagem permitidos
 		$configUpload['allowed_types'] = 'jpg|png';
 		// Usar nome de arquivo aleatório, ignorando o nome original do arquivo
@@ -63,7 +56,7 @@ class Base extends CI_Controller {
 			//Path da imagem a ser recortada
 			$configCrop['source_image']  = $dadosImagem['full_path'];
 			// Diretório onde a imagem recortada será gravada
-			$configCrop['new_image']     = './uploads/crops/';
+			$configCrop['new_image']     = 'uploads/crops';
 			// Proporção
 			$configCrop['maintain_ratio']= FALSE;
 			// Qualidade da imagem
@@ -89,21 +82,13 @@ class Base extends CI_Controller {
 				$this->load->view('home',$data);
 			}
 			else
-			{
-				// Define a URL da imagem gerada após o recorte
-				$urlImagem = base_url('uploads/crops/'.$dadosImagem['file_name']);
+			{	
+				// Alimenta o array com as informações sobre a imagem original e as informações do recorte para exibir na tela
+				$data['urlImagem'] = base_url('uploads/crops/'.$dadosImagem['file_name']);
+				$data['dadosImagem'] = $dadosImagem;
+				$data['dadosCrop'] = $tamanhos;				
 
-				// Grava a informação na sessão
-				$this->session->set_flashdata('urlImagem', $urlImagem);
-
-				// Grava os dados da imagem recortada na sessão
-				$this->session->set_flashdata('dadosImagem', $dadosImagem);
-
-				// Grava os dados da imagem original na sessão
-				$this->session->set_flashdata('dadosCrop', $tamanhos);
-
-				// Redireciona o usuário para a tela de visualização dos dados
-				redirect('visualizacao');
+				$this->load->view('visualizacao',$data);
 			}
 		}
 	}

@@ -1,11 +1,11 @@
 <?php $this->load->view('commons/cabecalho'); ?>
 
 <div class="container">
-	<div class="page-header">
-		<h1 class="text-center">Recortando Imagens com jCrop e CodeIgniter</h1>
+	<div class="page-header mb-5">
+		<h1 class="text-center">Recortando imagens com as bibliotecas jCrop e Image Manipulation no CodeIgniter</h1>
 	</div>
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-md-offset-3">
+		<div class="col-12 col-sm-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
 			<?php if(isset($error)):?>
 				<div class="alert alert-warning"><?=$error?></div>
 			<?php endif; ?>
@@ -15,10 +15,10 @@
 					<input type="file" name="imagem" id="seleciona-imagem"/>
 				</div>
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-md-offset-3">
+		<div class="col-12 col-sm-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
 			<p class="alert alert-info" id="texto-informativo">Selecione uma imagem para recortar</p>
 			<div id="imagem-box">
-				<img src="" class="img-responsive hidden" id="visualizacao_img" />
+				<img src="" class="img-fluid hidden" id="visualizacao_img" />
 			</div>
 			<input type="hidden" id="x" name="x" />
 			<input type="hidden" id="y" name="y" />
